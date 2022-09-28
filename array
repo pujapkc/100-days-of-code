@@ -1,0 +1,41 @@
+import java.util.*;
+class search{
+    int searching(int arr[],int len,int element){
+        
+        int i;
+         for( i=0;i<len;i++)
+         {
+            if(arr[i]==element)
+            
+                return i;
+                 
+            
+         }
+              return -1;
+    }
+}
+
+public class searching_unsorted {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int arr[]=new int[5];
+        System.out.println("enter the array elements");
+        for(int i=0;i<5;i++){
+             arr[i]=sc.nextInt();
+        }
+        int len=arr.length;
+        System.out.println("enter the element to be searched in array");
+        int n=sc.nextInt();
+        System.out.println("length of array is  "+len);
+        search obj=new search();
+        int a=obj.searching(arr,len,n);
+              if(a==-1)
+              {
+                System.out.println("the element is not present in array");
+              }
+              else
+       {
+        System.out.println("the element is present in array in " +(a+1)+ " position");
+       }
+    }
+}
