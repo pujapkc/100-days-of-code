@@ -1,0 +1,37 @@
+/*Sample Input
+
+1234
+20
+Sample Output
+
+1254
+24680
+Explanation
+
+1234+20=1254
+1234*20=24680 */
+
+
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+
+    BigInteger A = sc.nextBigInteger();
+    BigInteger B = sc.nextBigInteger();
+
+    if(((int) Math.log10(A.intValue())+1)<200 && ((int) Math.log10(B.intValue())+1)<200){       //check the total number of digits
+        System.out.println(A.add(B));
+        System.out.println(A.multiply(B));
+    }
+    }
+}
