@@ -1,0 +1,49 @@
+/*Sample Input
+
+5
+12 0 1 78 12
+2
+Insert
+5 23
+Delete
+0
+Sample Output
+
+0 1 78 12 23 */
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner scan = new Scanner(System.in);
+    int listSize= scan.nextInt();
+    List<Integer> list=new ArrayList<Integer>();
+    for(int i=0; i<listSize;i++){
+        list.add(scan.nextInt());
+    }
+    //System.out.println(list);
+    int queries= scan.nextInt();
+
+    for(int i=0;i<queries;i++){
+        String query= scan.next();
+        //System.out.println(query+"i:"+i);
+        if(query.equals("Insert")){
+            list.add(scan.nextInt(), scan.nextInt());
+        }else if(query.equals("Delete")){
+             list.remove(scan.nextInt());
+
+        }
+
+    }
+
+    for(Integer i: list){
+        System.out.printf("%d ",i);
+    }
+}
+    }
+
