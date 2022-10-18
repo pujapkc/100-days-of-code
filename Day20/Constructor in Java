@@ -1,0 +1,35 @@
+
+class employee{
+    private int id;
+    private String name;
+
+    
+    //constructor class is below
+    public  employee(){
+        id=34;
+        name="puja";
+    }
+    
+      
+    public String getname(){
+     return name;
+    }
+    public void setname(String n){
+     name=n;
+ }
+    public int getid(){
+     return id;
+    }
+    public void setid(int i){
+       id=i;
+    }
+ }
+ public class constructor {
+      public static void main(String args[]) {
+         employee obj=new employee();
+         System.out.println(obj.getid());
+         System.out.println(obj.getname());
+         
+     }
+ }
+ 
