@@ -1,0 +1,35 @@
+/* Exception handling is the process of responding to the occurrence, during computation, of exceptions – 
+anomalous or exceptional conditions requiring special processing – often changing the normal flow of program execution. */
+
+/* Sample Input :
+
+10
+Hello
+
+Sample Output :
+
+java.util.InputMismatchException */
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    
+       public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+        try {
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+            System.out.println(x/y);
+        } catch (ArithmeticException e) {
+            System.out.println(e);
+        } catch (InputMismatchException e) {
+            System.out.println(e.getClass().getName());
+        }
+    
+    }
+}
