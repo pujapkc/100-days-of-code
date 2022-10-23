@@ -1,0 +1,60 @@
+//A subarray of an "n" element array is an array composed from a contiguous block of the original array's elements
+
+/*Sample Input
+
+5
+1 -2 4 -5 1
+Sample Output
+
+9 */
+
+import java.io.*;
+import java.util.Scanner;
+
+public class Solution {
+
+ //Method to calculate sum from index m to n.*
+
+public static int Method(int[] arr,int m, int n){
+    int sum=0;
+    for (int i = m; i < n; i++) {
+        sum+= arr[i];
+    }
+   return sum; 
+}
+
+
+
+public static void main(String[] args) { 
+
+         
+
+    int n;
+    Scanner sc= new Scanner(System.in);
+    n=sc.nextInt();
+
+    int[] arr= new int[n];
+
+    for (int i = 0; i < arr.length; i++) {
+        arr[i]=sc.nextInt();
+    }
+    sc.close();
+
+    int k=1;
+    int sum=0, count=0;
+    while(k<=arr.length){
+        for(int j=0; j<arr.length; j++){
+            sum= Method(arr, j, j+k);
+            if(sum<0){
+                count++;
+            }
+            if(j+k==arr.length){
+                break;
+            }
+        }
+        k++;
+    }
+
+    System.out.println(count);
+}
+}
