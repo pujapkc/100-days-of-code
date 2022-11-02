@@ -1,0 +1,56 @@
+Input Format
+
+The first line of input contains a single integer,N  (the number of lines).
+The  subsequent lines each contain a line of text.
+
+Constraints
+
+Each line contains a maximum of 10^4 printable characters.
+The total number of characters in all test cases will not exceed 10^6.
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution{
+	public static void main(String[] args){
+		
+		Scanner in = new Scanner(System.in);
+		
+          	    int testCases = Integer.parseInt(in.nextLine());
+
+    Pattern p = Pattern.compile("<(.+)>([^<]+)</\\1>");
+
+    while(testCases>0) {
+
+        String line = in.nextLine();
+
+        Matcher m = p.matcher(line);
+
+        if(!m.find()) {
+
+            System.out.println("None");
+
+        }
+        else {
+
+            do {
+
+                System.out.println(m.group(2));
+
+            }
+            while(m.find());
+
+        }
+
+        testCases--;
+    }
+
+    in.close();
+			
+
+		}
+	}
