@@ -1,0 +1,19 @@
+Manasa is out on a hike with friends. She finds a trail of stones with numbers on them. 
+She starts following the trail and notices that any two consecutive stones' numbers differ by one of two values. 
+Legend has it that there is a treasure trove at the end of the trail. If Manasa can guess the value of the last stone, the treasure will be hers.
+
+Sample Input
+
+STDIN   Function
+-----   --------
+2       T = 2 (test cases)
+3       n = 3 (test case 1)
+1       a = 1
+2       b = 2
+4       n = 4 (test case 2)
+10      a = 10
+100     b = 100
+Sample Output
+
+2 3 4 
+30 120 210 300 
