@@ -1,0 +1,11 @@
+We say that a string contains the word hackerrank if a subsequence of its characters spell the word hackerrank.
+Remeber that a subsequence maintains the order of characters selected from a sequence.
+Sample Input 0
+
+2
+hereiamstackerrank
+hackerworld
+Sample Output 0
+
+YES
+NO
