@@ -1,0 +1,20 @@
+Given the values of n and b for g  games of Happy Ladybugs, determine if it's possible to make all the ladybugs happy. For each game, return YES if all the ladybugs 
+can be made happy through some number of moves. Otherwise, return NO.
+
+Sample Input 0
+
+4
+7
+RBY_YBR
+6
+X_Y__X
+2
+__
+6
+B_RRBR
+Sample Output 0
+
+YES
+NO
+YES
+YES
